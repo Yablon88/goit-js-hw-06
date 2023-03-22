@@ -1,13 +1,13 @@
-const audit = document.getElementById("validation-input");
+const validLenght = document.getElementById("validation-input");
 
-const atribute = Number(audit.getAttribute("data-length"));
+const atribute = Number(validLenght.getAttribute("data-length"));
 
-audit.addEventListener("blur", onInputBlur);
+validLenght.addEventListener("blur", onInputBlur);
 
 function onInputBlur(elem) {
-  if (elem.currentTarget.value.length != atribute) {
-    return audit.classList.add("invalid");
+  if (elem.currentTarget.value.length !== atribute) {
+    return validLenght.classList.add("invalid");
   }
-  audit.classList.remove("invalid");
-  return audit.classList.add("valid");
+  validLenght.classList.remove("invalid");
+  return validLenght.classList.add("valid");
 }
